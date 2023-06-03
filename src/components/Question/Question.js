@@ -66,13 +66,14 @@ const Question = ({
           {options &&
             options.map((i) => (
               <button
+                dangerouslySetInnerHTML={{
+                  __html: i,
+                }}
                 onClick={() => handleCheck(i)}
                 className={`singleOption ${selected && handleSelect(i)}`}
                 key={i}
                 disabled={selected}
-              >
-                {i}
-              </button>
+              ></button>
             ))}
         </div>
 

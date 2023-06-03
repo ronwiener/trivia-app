@@ -10,6 +10,7 @@ import "./App.css";
 function App() {
   const [questions, setQuestions] = useState();
   const [score, setScore] = useState(0);
+  const [currQuesNum, setCurrQuesNum] = useState(0);
 
   const fetchQuestions = async (category = "", difficulty = "") => {
     const { data } = await axios.get(
@@ -41,10 +42,22 @@ function App() {
                   score={score}
                   setScore={setScore}
                   setQuestions={setQuestions}
+                  currQuesNum={currQuesNum}
+                  setCurrQuesNum={setCurrQuesNum}
                 />
               }
             />
-            <Route path="result" element={<Result score={score} />} />
+            <Route
+              path="result"
+              element={
+                <Result
+                  score={score}
+                  setCurrQuesNum={setCurrQuesNum}
+                  setQuestions={setQuestions}
+                  setScore={setScore}
+                />
+              }
+            />
           </Routes>
         </BrowserRouter>
       </div>

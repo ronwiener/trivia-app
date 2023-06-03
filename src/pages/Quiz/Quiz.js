@@ -3,9 +3,15 @@ import Question from "../../components/Question/Question";
 import CircularProgress from "@mui/material/CircularProgress";
 import "./Quiz.css";
 
-const Quiz = ({ score, questions, setQuestions, setScore }) => {
+const Quiz = ({
+  score,
+  questions,
+  setQuestions,
+  setScore,
+  currQuesNum,
+  setCurrQuesNum,
+}) => {
   const [options, setOptions] = useState();
-  const [currQuesNum, setCurrQuesNum] = useState(0);
 
   useEffect(() => {
     setOptions(
