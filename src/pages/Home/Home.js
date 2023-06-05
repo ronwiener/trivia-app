@@ -28,7 +28,7 @@ const Home = ({ fetchQuestions }) => {
   return (
     <div className="content">
       <div className="settings">
-        <span style={{ fontSize: 30 }}>Question Settings</span>
+        <span style={{ fontSize: 30 }}>Select for Game Play</span>
 
         <div className="settings_select">
           {error && <ErrorMessage>Please fill all the fields</ErrorMessage>}
@@ -36,7 +36,7 @@ const Home = ({ fetchQuestions }) => {
           <TextField
             style={{ marginBottom: 30, color: "black" }}
             select
-            label="Select Category"
+            label="Category"
             variant="outlined"
             onChange={(e) => setCategory(e.target.value)}
             value={category}
@@ -50,7 +50,7 @@ const Home = ({ fetchQuestions }) => {
 
           <TextField
             select
-            label="Select Difficulty"
+            label="Difficulty Level"
             variant="outlined"
             style={{ marginBottom: 30 }}
             onChange={(e) => setDifficulty(e.target.value)}

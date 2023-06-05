@@ -13,7 +13,9 @@ const Result = ({ score, setCurrQuesNum, setScore, setQuestions }) => {
   };
   return (
     <div className="result">
-      <span className="title">Final Score: {score}</span>
+      <span className="title" style={{ fontSize: "2em" }}>
+        Correct Answers: {score}
+      </span>
 
       <Button
         variant="contained"
