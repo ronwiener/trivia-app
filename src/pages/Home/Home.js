@@ -28,7 +28,9 @@ const Home = ({ fetchQuestions }) => {
   return (
     <div className="content">
       <div className="settings">
-        <span style={{ fontSize: 30 }}>Select for Game Play</span>
+        <span style={{ fontSize: 30, textAlign: "center" }}>
+          Select for Game Play
+        </span>
 
         <div className="settings_select">
           {error && <ErrorMessage>Please fill all the fields</ErrorMessage>}
